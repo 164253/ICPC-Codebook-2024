@@ -2,6 +2,8 @@ include:
     - DataStructure:
         - Treap:
             - DataStructure/Treap.cpp
+        - Dynamic Segment Tree:
+            - DataStructure/DynamicSegmentTree.cpp
     - Math:
         - Mu:
             - Math/Mu.cpp
