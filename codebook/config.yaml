@@ -41,3 +41,8 @@ include:
             - Geometry/inside.cpp
         - Minimum Euclidean Distance:
             - Geometry/MinimumEuclideanDistance.cpp
+    - Tree:
+        - Heavy Light Decomposition (modify and query on path):
+            - tree/heavy-light-decomposition.cpp
+        - LCA:
+            - tree/lca.cpp
