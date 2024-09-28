@@ -19,6 +19,8 @@ include:
         - Longest Palindrome:
             - String/LongestPalindrome.cpp
     - Graph:
+        - one-out-degree (CSES Planets Cycles):
+            - Graph/one-degree-cycle.cpp
         - Dijkstra:
             - Graph/Dijkstra.cpp
         - MaximumFlow:
