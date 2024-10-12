@@ -5,6 +5,12 @@ include:
         - Dynamic Segment Tree:
             - DataStructure/DynamicSegmentTree.cpp
     - Math:
+        - FFT:
+            - Math/fft.cpp
+        - NTT:
+            - Math/ntt.cpp
+        - Gaussian-Jordan:
+            - Math/gaussian.cpp
         - Mu:
             - Math/Mu.cpp
         - Lucas:
