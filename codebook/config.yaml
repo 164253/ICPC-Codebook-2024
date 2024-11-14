@@ -19,6 +19,8 @@ include:
             - Math/Inv.cpp
         - Formula:
             - Math/Formula.tex
+        - Matrix:
+            - Math/Matrix.cpp
     - String:
         - KMP:
             - String/KMP.cpp
@@ -52,3 +54,6 @@ include:
             - tree/heavy-light-decomposition.cpp
         - LCA:
             - tree/lca.cpp
+    - Misc:
+        - Tri Search:
+            - misc/tri_search.cpp
