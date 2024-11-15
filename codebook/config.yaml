@@ -26,6 +26,8 @@ include:
             - String/KMP.cpp
         - Longest Palindrome:
             - String/LongestPalindrome.cpp
+        - Z:
+            - String/Z.cpp
     - Graph:
         - one-out-degree (CSES Planets Cycles):
             - Graph/one-degree-cycle.cpp

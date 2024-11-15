@@ -1,13 +1,11 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 #define int long long
 using namespace std;
 
-
-template<class T>
-T extgcd(T a,T b,T &x,T &y){
-  if(!b){
+template <class T> T extgcd(T a, T b, T &x, T &y) {
+  if (!b) {
     x = 1;
-    y = 0; 
+    y = 0;
     return a;
   }
   T ans = extgcd(b, a % b, y, x);
@@ -15,10 +13,10 @@ T extgcd(T a,T b,T &x,T &y){
   return ans;
 }
 
-template<class T>
-T modeq(T a,T b,T p){
+template <class T> T modeq(T a, T b, T p) {
   T x, y, d = extgcd(a, p, x, y);
-  if(b % d)return 0;
+  if (b % d)
+    return 0;
   return ((b / d * x) % p + p) % p;
 }
 
@@ -281,40 +279,40 @@ public:
           v[i][j] %= p;
     return *this;
   }
-  void gaussian(){
+  void gaussian() {
     int curi = 0;
     int n = v.size();
     int m = v[0].size();
-    for (int j = 0; j < m; j++){
+    for (int j = 0; j < m; j++) {
       int i;
-      for (i = curi; i < n; i++){
-        if(MOD){
+      for (i = curi; i < n; i++) {
+        if (MOD) {
           v[i][j] %= MOD;
         }
         if (v[i][j]) {
           break;
         }
       }
-      if(i >= n){
+      if (i >= n) {
         continue;
       }
       if (v[i][j] == 0)
         continue;
-      for (int k = 0; k < m; k++){
+      for (int k = 0; k < m; k++) {
         swap(v[i][k], v[curi][k]);
       }
-      for (int k = m - 1; k >= j; k--){
-        if(MOD){
+      for (int k = m - 1; k >= j; k--) {
+        if (MOD) {
           v[curi][k] *= modeq(v[curi][j], (T)1, (T)MOD);
           v[curi][k] = (v[curi][k] % MOD + MOD) % MOD;
-        }else
+        } else
           v[curi][k] /= v[curi][j];
       }
-      for (int i = 0; i < n; ++i){
+      for (int i = 0; i < n; ++i) {
         if (i != curi) {
-          for (int k = m - 1; k >= j; k--){
+          for (int k = m - 1; k >= j; k--) {
             v[i][k] -= v[curi][k] * v[i][j];
-            if(MOD){
+            if (MOD) {
               v[i][k] = (v[i][k] % MOD + MOD) % MOD;
             }
           }
