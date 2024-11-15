@@ -17,6 +17,14 @@ include:
             - Math/Lucas.cpp
         - Inv:
             - Math/Inv.cpp
+        - CRT:
+            - Math/CRT.cpp
+        - Generator:
+            - Math/Generator.cpp
+        - Count Primes:
+            - Math/CountPrimes.cpp
+        - Pollard Rho:
+            - Math/PollardRho.cpp
         - Formula:
             - Math/Formula.tex
         - Matrix:
@@ -51,6 +59,8 @@ include:
             - Geometry/inside.cpp
         - Minimum Euclidean Distance:
             - Geometry/MinimumEuclideanDistance.cpp
+        - Convex Hull:
+            - Geometry/ConvexHull.cpp
     - Tree:
         - Heavy Light Decomposition (modify and query on path):
             - tree/heavy-light-decomposition.cpp
