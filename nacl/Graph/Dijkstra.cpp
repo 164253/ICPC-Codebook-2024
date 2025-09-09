@@ -1,13 +1,15 @@
-int n, m;
-vector<pair<int, int>> v[100005];
-bitset<100005> vis;
-int dis[100005];
+vector<pair<int, int>> v[100005], v2[100005];
+vector<edge> es;
+int dis1[100005];
+int dis2[100005];
+bitset<100005> vis1, vis2;
 
-void dijkstra(int x) {
+void dijkstra(int x, int *dis, vector<pair<int, int>> *v, bitset<100005> &vis) {
   priority_queue<pair<int, int>, vector<pair<int, int>>,
                  greater<pair<int, int>>>
       pq;
-  memset(dis, 0x3f, sizeof(dis));
+  memset(dis, 0x3f, sizeof(dis1));
+  vis.reset();
   dis[x] = 0;
   pq.push({0, x});
   while (!pq.empty()) {
