@@ -4,11 +4,21 @@ include:
             - DataStructure/Treap.cpp
         - Dynamic Segment Tree:
             - DataStructure/DynamicSegmentTree.cpp
+        - Pbds Gp Hash Table:
+            - PbdsGpHashTable.cpp
+        - Pbds Rope:
+            - PbdsRope.cpp
+        - Pbds Tree:
+            - PbdsTree.cpp
+        - Pbds Priority Queue:
+            - PbdsPriorityQueue.cpp
     - Math:
         - FFT:
             - Math/fft.cpp
         - NTT:
             - Math/ntt.cpp
+        - FWT:
+            - Math/Fwt.cpp
         - Gaussian-Jordan:
             - Math/gaussian.cpp
         - Mu:
