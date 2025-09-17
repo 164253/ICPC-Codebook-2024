@@ -64,11 +64,11 @@ def get_includes(filename):
             match = INCLUDE_RE.match(line)
             if match:
                 include_path = Path(filename).parent / Path(match.group(1))
-                include_path = include_path.resolve()
+                include_path = include_path.resolve().as_posix()
                 if not include_path.is_file():
                     raise FileNotFoundError(f'Non-existent include file '
                                             f'`{include_path}` in {filename}')
-                yield str(include_path)
+                yield include_path
 
 
 def generate_content(config):
@@ -87,7 +87,7 @@ def generate_content(config):
                 for subtitle, subsections in section.items():
                     parse_all(subsections, subtitle)
             elif isinstance(section, str):
-                path = str((Path('../nacl') / Path(section)).resolve())
+                path = (Path('../nacl') / Path(section)).resolve().as_posix()
                 lexer = pygments.lexers.find_lexer_class_for_filename(path)
                 lang = lexer.aliases[0]
                 if path in file_info_map:
@@ -120,7 +120,7 @@ def generate_content(config):
                     yield from generate_content_internal(
                         subsections, subtitle, depth + 1)
             elif isinstance(section, str):
-                path = str((Path('../nacl') / Path(section)).resolve())
+                path = (Path('../nacl') / Path(section)).resolve().as_posix()
                 title, lang = file_info_map[path]
                 if lang == 'tex':
                     yield f'\\input{{{path}}}'
@@ -139,6 +139,8 @@ def main():
     if len(sys.argv) != 3:
         print(f'Usage: {sys.argv[0]} <config_file> <output_file>')
         exit(1)
+
+    print(sys.argv[1],sys.argv[2])
 
     _, infile, outfile = sys.argv
 
