@@ -59,7 +59,7 @@ class DependencyGraph:
 
 def get_includes(filename):
     INCLUDE_RE = re.compile(r'^\s*#\s*include\s*"(.+?)"')
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding='utf-8') as file:
         for line in file:
             match = INCLUDE_RE.match(line)
             if match:
@@ -144,10 +144,10 @@ def main():
 
     _, infile, outfile = sys.argv
 
-    with open(infile, 'r') as file:
+    with open(infile, 'r', encoding='utf-8') as file:
         config = yaml.safe_load(file)
 
-    with open(outfile, 'w') as file:
+    with open(outfile, 'w', encoding='utf-8') as file:
         for line in generate_content(config):
             file.write(line + '\n')
 
