@@ -1,5 +1,17 @@
 CLANG_FORMAT = clang-format
 
+ifeq ($(OS),Windows_NT)
+    OS_NAME := windows
+    MV = move
+    SEP = \\
+    FORMAT_CMD = for /R nacl %%f in (*.c *.h *.cpp *.hpp) do $(CLANG_FORMAT) -i "%%f"
+else
+    OS_NAME := linux
+    MV = mv
+    SEP = /
+    FORMAT_CMD = find nacl/ -type f -regex ".*\.\(c\|h\|cpp\|hpp\)" -exec $(CLANG_FORMAT) -i {} +
+endif
+
 help:
 	@echo "Available commands:"
 	@echo "    make help           - Show this help"
@@ -11,14 +23,14 @@ help:
 	@echo "    make clean          - Clean up all build processes"
 
 codebook: format
-	$(MAKE) -C codebook all
-	mv codebook/main.pdf codebook.pdf
+	$(MAKE) -C codebook all OS_NAME=$(OS_NAME) MV=$(MV) SEP=$(SEP)
+	$(MV) codebook$(SEP)main.pdf codebook.pdf
 
 format:
-	find nacl/ -type f -regex ".*\.\(c\|h\|cpp\|hpp\)" \
-		-exec $(CLANG_FORMAT) -i {} +
+	$(FORMAT_CMD)
 
 tests:
+	$(MV) codebook$(SEP)main.pdf codebook.pdf
 
 clean-latex:
-	$(MAKE) -C codebook clean
+	$(MAKE) -C codebook clean OS_NAME=$(OS_NAME) MV=$(MV)

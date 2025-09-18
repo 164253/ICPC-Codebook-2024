@@ -1,11 +1,19 @@
 \documentclass[10pt, a4paper, twocolumn, oneside]{article}
-
-\usepackage{codebook}
+\input{pythoncmd.tex}
+\usepackage[chinese]{codebook}
 
 \team{official beautiful fruit}{National Cheng Kung University}
 \codetheme{default}
 
 \begin{document}
+
+\renewcommand{\inputcode}[3]{%
+    \typeout{Processing file: #2}  % 在此輸出處理的文件路徑
+    \immediate\write18{\pythoncmd\space preprocessor.py "#2" "#3"}%
+    \vspace{-0.6ex}%
+    \inputminted{#1}{#3}%
+    \vspace{-3ex}%
+}
 
 \fontsize{8.3pt}{0}\selectfont
 \tableofcontents

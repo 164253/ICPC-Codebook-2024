@@ -4,11 +4,25 @@ include:
             - DataStructure/Treap.cpp
         - Dynamic Segment Tree:
             - DataStructure/DynamicSegmentTree.cpp
+        - Pbds Gp Hash Table:
+            - DataStructure/PbdsGpHashTable.cpp
+        - Pbds Rope:
+            - DataStructure/PbdsRope.cpp
+        - Pbds Tree:
+            - DataStructure/PbdsTree.cpp
+        - Pbds Priority Queue:
+            - DataStructure/PbdsPriorityQueue.cpp
+        - 2DBIT:
+            - DataStructure/2DBIT.cpp
+        - Persistent Segment Tree:
+            - DataStructure/PersistentSegmentTree.cpp
     - Math:
         - FFT:
             - Math/fft.cpp
         - NTT:
             - Math/ntt.cpp
+        - FWT:
+            - Math/Fwt.cpp
         - Gaussian-Jordan:
             - Math/gaussian.cpp
         - Mu:
@@ -29,6 +43,10 @@ include:
             - Math/Formula.tex
         - Matrix:
             - Math/Matrix.cpp
+        - Miller Rabin:
+            - Math/MillerRabin.cpp
+        - Xor Basis:
+            - Math/XorBasis.cpp
     - String:
         - KMP:
             - String/KMP.cpp
@@ -36,6 +54,8 @@ include:
             - String/LongestPalindrome.cpp
         - Z:
             - String/Z.cpp
+        - Booth:
+            - String/Booth.cpp
     - Graph:
         - one-out-degree (CSES Planets Cycles):
             - Graph/one-degree-cycle.cpp
@@ -43,8 +63,12 @@ include:
             - Graph/Dijkstra.cpp
         - MaximumFlow:
             - Graph/MaximumFlow.cpp
+        - Dinic:
+            - Graph/Dinic.cpp
         - SCC:
             - Graph/SCC.cpp
+        - VBCC:
+            - Graph/VBCC.cpp
         - 2-SAT(CSES Giant Pizza):
             - Graph/2-SAT.cpp
     - DP:
@@ -52,6 +76,8 @@ include:
             - DP/Li-Chao_SegmentTree.cpp
         - CHO:
             - DP/CHO.cpp
+        - SOSDP:
+            - DP/SOSDP.cpp
     - Geometry:
         - Intersect:
             - Geometry/Intersect.cpp
@@ -61,6 +87,8 @@ include:
             - Geometry/MinimumEuclideanDistance.cpp
         - Convex Hull:
             - Geometry/ConvexHull.cpp
+        - 164253 Version:
+            - Geometry/164253Version.cpp
     - Tree:
         - Heavy Light Decomposition (modify and query on path):
             - tree/heavy-light-decomposition.cpp
@@ -69,3 +97,7 @@ include:
     - Misc:
         - Tri Search:
             - misc/tri_search.cpp
+        - Big Number:
+            - misc/BigNum(luoguP1005).cpp
+        - 對拍:
+            - misc/對拍.md

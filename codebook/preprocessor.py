@@ -10,7 +10,7 @@ def process_code(filename):
     CLANG_FORMAT_RE = re.compile(r'\s*(//|/\*) clang-format .*')
     C_COMMENT_RE = re.compile(r'\s*///.*$')
     PY_COMMENT_RE = re.compile(r'\s*###.*$')
-    with open(filename, 'r') as file:
+    with open(filename, 'r', encoding='utf-8') as file:
         for line in file:
             if line.strip() == '':
                 yield '\n'
@@ -33,7 +33,7 @@ def main():
 
     _, infile, outfile = sys.argv
 
-    with open(outfile, 'w') as file:
+    with open(outfile, 'w', encoding='utf-8') as file:
         for line in process_code(infile):
             file.write(line)
 

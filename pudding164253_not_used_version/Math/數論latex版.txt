@@ -1,0 +1,38 @@
+\subsubsection{Fermat's Little Theorem}
+    $(a+b)^p \equiv a+b \equiv a^p+b^p \pmod p$
+\subsubsection{Wilson's Theorem}
+    $(p-1)! \equiv -1 \pmod p$
+\subsubsection{Legendre Theorem}
+    v(n):=power of p in n\\
+    (n)_p:=\frac{n}{p^(v(n))}\\
+    s(n):=sum of all digits of n in base p\\
+    $v(n!)=\sum_{i=1}^\infty \lfloor \frac n {p^i} \rfloor=\frac{n-s(n)}{p-1}$
+\subsubsection{Kummer Theorem}
+    $v(\binom{n}{m})=\frac{s(n)+s(m-n)-s(m)}{p-1}$
+\subsubsection{ext-Kummer Theorem}
+    $v(\binom{n}{{m1,m2,...mk}}=\frac{\sum_{i=1}^k s(mi)-s(n)}{p-1}$
+\subsubsection{Factorial with mod}
+    $(n!)_p \equiv -1^{\lfloor \frac n p\rfloor}((\lfloor \frac n p\rfloor)!)_p((n%p)!) \pmod p$
+    $O(p+\log_p(n))$ with factorial table.
+\subsubsection{nCr with mod}
+    $\binom{n}{m}\equiv\frac{((n+m)!)_p}{(n!)_p(m!)_p}p^{v(n+m)-v(n)-v(m)}\pmod {p^q}$
+\subsubsection{ext-Wilson's Theorem}
+    $((p^q)!)_p\equiv\pm 1\pmod {p^q}$
+\subsubsection{Lucas' Theorem}
+    $\binom{n}{m}\equiv\binom{\lfloor\frac{n}{p}\rfloor}{\lfloor\frac{m}{p}\rfloor}\binom{n%p}{m%p}\pmod p$
+    $O(p+\log_p(n))$ with factorial table and modinv table.
+\subsubsection{Properties of nCr with mod}
+    If any i in base p satisfies $n_i<m_i$, then $\binom{n_i}{m_i}%p=0$.
+    Therefore $\binom{n}{m}=\prod_{i=0}^{\max(\log_p(a),\log_p(b))}\binom{n_i}{m_i}%p$ so $\binom{n}{m}%p=0$.
+    If $p=2$, then $\binom{n}{m}$ is odd <=> any bit in $n<m$.
+    Lucas' theorem can be derived from this generating function method without relying on Fermat's Little Theorem.
+    It is also true for polynomials.
+\subsubsection{ext-Lucas' Theorem}
+    For any $k\in$ positive number, calculate \binom{n}{m}%k can decompose k by Fundamental Theorem of Arithmetic.
+    And then use crt.
+\subsubsection{Catalan Number}
+    $C_0=C_1=1, \text{if }n>1\text{then }C_n=\sum_{k=0}^{n-1}C_kC_{n-1-k}=\frac{\binom{2n}{n}}{n+1}$
+    Also the number of legal placements of n pairs of brackets is $C_n$.
+    If there are any k kinds of brackets available, then $k^nC_n$.
+\subsubsection{modinv table}
+    p=i*(p/i)+p%i,-p%i=i*(p/i),inv(i)=-(p/i)*inv(p%i)
