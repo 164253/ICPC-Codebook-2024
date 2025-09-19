@@ -36,35 +36,43 @@ ll crt(V<ll> &p, V<ll> &a) {
 }
 /*$(a+b)^p \equiv a+b \equiv a^p+b^p \pmod p$ (小費馬)
 $(p-1)! \equiv -1 \pmod p$ (威爾遜定理)
-\(v(n):=n中p的冪次, (n)_{p}:=\frac{n}{p^{v(n)}},\)
-\(s(n):=p進制下n的所有位數和\)
-\(v(n!)=\sum_{i=1}^\infty \lfloor\)
-\(\frac{n}{p^i} \rfloor=\frac{n-s(n)}{p-1}\) (勒壤得定理)
+$v(n):=n中p的冪次, (n)_{p}:=\frac{n}{p^{v(n)}},$
+$s(n):=p進制下n的所有位數和$
+$v(n!)=\sum_{i=1}^\infty \lfloor$
+$\frac{n}{p^i} \rfloor=\frac{n-s(n)}{p-1}$ (勒壤得定理)
 $v(\binom{n}{m})=\frac{s(n)+s(m-n)-s(m)}{p-1}$ (庫默爾定理)
-\(v(\binom{n}{{m1,m2,...mk}}=\)
-\(\frac{\sum_{i=1}^{k}s(mi)-s(n)}{p-1}\)(庫默爾定理推廣)
-\((n!)_p \equiv -1^{\lfloor \frac{n}{p}\rfloor}\)
-\(((\lfloor\frac{n}{p}\rfloor)!)_p((n\%p)!) \pmod p\)
+$v(\binom{n}{{m1,m2,...mk}}=$
+$\frac{\sum_{i=1}^{k}s(mi)-s(n)}{p-1}$(庫默爾定理推廣)
+\[
+    (n!)_p\equiv-1^{\lfloor\frac{n}{p}\rfloor}
+\]
+\[
+    ((\lfloor\frac{n}{p}\rfloor)!)_p((n\%p)!)\pmod p
+\]
 打階乘表+迭代這條式子可以 $O(p+log_p(n))$ (mod下階乘)
-\(\binom{n}{m}\equiv\frac{((n+m)!)_p}{(n!)_p(m!)_p}\)
-\(p^{v(n+m)-v(n)-v(m)}\pmod{p^q}\)
+$\binom{n}{m}\equiv\frac{((n+m)!)_p}{(n!)_p(m!)_p}$
+$p^{v(n+m)-v(n)-v(m)}\pmod{p^q}$
 把 $p$ 從 $C(n,m)$ 裡面隔離掉了 就能用上面的
 $(n!)_p$+模逆元(mod下階乘推廣至二項式)
 $((p^q)!)_p\equiv\pm 1\pmod {p^q}$ (威爾遜定理推廣)
-\(\binom{n}{m}\equiv\binom{\lfloor\frac{n}{p}\rfloor}\)
-\({\lfloor\frac{m}{p}\rfloor}\binom{n\%p}{m\%p}\pmodp\)
+\[
+    \binom{n}{m}\equiv\binom{\lfloor\frac{n}{p}\rfloor}
+\]
+${\lfloor\frac{m}{p}\rfloor}\binom{n\%p}{m\%p}\pmod p$
 (lucas定理) 打階乘表跟模逆元表+迭代這條式子可以 $O(p+log_p(n))$
 若 $p$ 進制下任何一位 $i$ 滿足 $n_i<m_i$ 則
 $\binom{n_i}{m_i}\%p=0$
-則因 \(\binom{n}{m}=\prod_{i=0}^{\max(\log_p(a),\log_p(b))}\)
-\(\binom{n_i}{m_i}\%p$導致$\binom{n}{m}\%p=0\)
+則因 $\binom{n}{m}=\prod_{i=0}^{\max(\log_p(a),\log_p(b))}$
+$\binom{n_i}{m_i}\%p$導致$\binom{n}{m}\%p=0$
 設 $p=2$ 則有 $\binom{n}{m}$ 是奇數的充要條件為二進制下每一位
 $n<m$ (lucas定理額外性質) lucas定理可由此生成函數做法得到
 不依賴小費馬 對多項式也成立 根據上述
 $\binom{n}{m}\%k$ 可將 $k$ 做唯一質數分解
 個別做完再做crt得到結果(exlucas定理)
-卡特蘭數 \(C(0)=C(1)=1,n>1時C(n)=\sum_{k=0}^{n-1}C(k)C(n-1-k)=\)
-\(\frac{\binom{2n}{n}}{n+1}\)
+\[
+    卡特蘭數 C(0)=C(1)=1,n>1時C(n)=\sum_{k=0}^{n-1}C(k)C(n-1-k)=
+\]
+$\frac{\binom{2n}{n}}{n+1}$
 同時 $n$ 對括號的合法放置數即是 $C(n)$ 若有任意k種括號可選 則
 $C(n)k^n$
 模逆元表p=i*(p/i)+p%i,-p%i=i*(p/i),inv(i)=-(p/i)*inv(p%i)*/
