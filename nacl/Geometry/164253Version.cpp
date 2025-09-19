@@ -43,7 +43,7 @@ pdd operator*(const pll a, const double x) {
 pdd operator*(const double x, const pll a) {
     return {a.F * x, a.S * x};
 }
-//沒有標示幾個 vector 的都是對三個點做事，以第一個點為參考點
+// 沒有標示幾個 vector 的都是對三個點做事，以第一個點為參考點
 ll len2(pll p) {
     return (ll)p.F * p.F + (ll)p.S * p.S;
 } // 1 vector
@@ -65,7 +65,7 @@ bool btw(pll p1, pll p2, pll p3) {
     return ori(p3, p1, p2) == 0 && dot(p3, p1, p2) <= 0;
 } // p3 bwteen p1,p2
 bool banana(pll p1, pll p2, pll p3,
-            pll p4) { //問兩線段是否香蕉
+            pll p4) { // 問兩線段是否香蕉
     if(btw(p1, p2, p3) || btw(p1, p2, p4) || btw(p3, p4, p1) ||
        btw(p3, p4, p2))
         return true;
@@ -73,8 +73,8 @@ bool banana(pll p1, pll p2, pll p3,
            ori(p3, p4, p1) * ori(p3, p4, p2) < 0;
 }
 pdd banana_point(pll p1, pll p2, pll p3,
-                 pll p4) { //分點，算的是無限延伸直線的交點
-                           //平行的時候 undefined
+                 pll p4) { // 分點，算的是無限延伸直線的交點
+                           // 平行的時候 undefined
     return cross(p2 - p1, p4 - p1) /
                (double)cross(p2 - p1, p4 - p3) * p3 -
            cross(p2 - p1, p3 - p1) /
@@ -89,16 +89,16 @@ double min_dis(pll p1, pll p2,
         return min(len(p3 - p1), len(p3 - p2));
     return abs(cross(p1, p2, p3)) / len(p2 - p1);
 }
-ll area2(vector<pll> &v) { //傳入一個多邊形照順序的點集
-                           //起點要出現兩次，回傳兩倍面積
-                           //注意是兩倍才可以 ll 避免浮點數
+ll area2(vector<pll> &v) { // 傳入一個多邊形照順序的點集
+                           // 起點要出現兩次，回傳兩倍面積
+                           // 注意是兩倍才可以 ll 避免浮點數
     int n = v.size() - 1;
     ll ans = 0;
     for(int i = 0; i < n; ++i) ans += cross(v[i], v[i + 1]);
     return abs(ans);
 }
 int in_polygon(vector<pll> &v,
-               pll p) { //傳入多邊形，起點要出現兩次，回傳
+               pll p) { // 傳入多邊形，起點要出現兩次，回傳
                         //{-1:in, 0:on, 1:out}
     int n = v.size() - 1, ans = 1;
     for(int i = 0; i < n; ++i)
@@ -106,9 +106,9 @@ int in_polygon(vector<pll> &v,
     for(int i = 0; i < n; ++i)
         if(banana(v[i], v[i + 1], p, {(ll)2e9 + 7, p.S + 1LL}))
             ans *= -1;
-    //對於任意 p 到 {W, p.S+1}
-    //的向量中不會有整數點存在，其中需要滿足 {W, p.S+1}
-    //必須很遠，保證在多邊形外
+    // 對於任意 p 到 {W, p.S+1}
+    // 的向量中不會有整數點存在，其中需要滿足 {W, p.S+1}
+    // 必須很遠，保證在多邊形外
     return ans;
 }
 void solve() {

@@ -15,4 +15,4 @@ string booth(string s) {
     }
     return s.substr(k, s.size() >> 1);
 }
-//給出循環排列後最小字典序的解
+// 給出循環排列後最小字典序的解

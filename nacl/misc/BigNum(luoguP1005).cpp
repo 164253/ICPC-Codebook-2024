@@ -1,4 +1,4 @@
-//洛谷P1005
+// 洛谷P1005
 #include <bits/stdc++.h>
 using namespace std;
 #define N 85

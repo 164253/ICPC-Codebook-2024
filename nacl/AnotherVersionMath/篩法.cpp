@@ -1,4 +1,4 @@
-//待加入分塊篩
+// 待加入分塊篩
 template <class T> class Prime {
 #define N (int)1e8 + 9
   public:

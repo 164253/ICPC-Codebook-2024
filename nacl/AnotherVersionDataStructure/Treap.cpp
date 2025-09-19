@@ -139,14 +139,14 @@ int kth(node *&tr, int k) {
 int count(node *&tr, int L, int R) { // count[L,R]
     auto [l, x] = split(tr, L - 1);
     auto [m, r] = split(x, R);
-    int ans = m->sz; //看要改啥
+    int ans = m->sz; // 看要改啥
     tr = merge(merge(l, m), r);
     return ans;
 }
 int countkth(node *&tr, int L, int R) { // count[rk.L,rk.R]
     auto [l, x] = splitsz(tr, L - 1);
     auto [m, r] = splitsz(x, R - L);
-    int ans = m->sum; //看要改啥
+    int ans = m->sum; // 看要改啥
     tr = merge(merge(l, m), r);
     return ans;
 }
@@ -167,7 +167,7 @@ int next(node *&tr, int v) {
 int qry(node *&tr, int L, int R) { // qry[L,R]
     auto [x, r] = splitsz(tr, R);
     auto [l, m] = splitsz(x, L - 1);
-    int ans = m->sum; //看要改啥
+    int ans = m->sum; // 看要改啥
     tr = merge(merge(l, m), r);
     return ans;
 }
@@ -176,7 +176,7 @@ void modify(node *&tr, int L, int R, int v) { // modify[L,R]
     auto [l, m] = splitsz(x, L - 1);
     m->val += v;
     m->add_tag += v;
-    m->rev_tag = 1; //看要改啥
+    m->rev_tag = 1; // 看要改啥
     tr = merge(merge(l, m), r);
 }
 int main() {

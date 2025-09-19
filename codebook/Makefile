@@ -22,5 +22,5 @@ build:
 	$(MKDIR) $(BUILD_DIR)
 
 content:
-	echo \newcommand{\pythoncmd}{$(PYTHONCMD)} > pythoncmd.tex
+	printf '\\newcommand{\\pythoncmd}{%s}' '$(PYTHONCMD)' > pythoncmd.tex
 	$(PYTHONCMD) content-generator.py config.yaml $(BUILD_DIR)$(SEP)content.tex

@@ -21,10 +21,8 @@ include:
             - Math/CRT.cpp
         - CountPrimes.cpp:
             - Math/CountPrimes.cpp
-        - FFT.cpp:
-            - Math/FFT.cpp
-        - FWT.cpp:
-            - Math/FWT.cpp
+        - Fwt.cpp:
+            - Math/Fwt.cpp
         - Gaussian-Jordan.cpp:
             - Math/Gaussian-Jordan.cpp
         - Generator.cpp:
@@ -39,12 +37,16 @@ include:
             - Math/MillerRabin.cpp
         - Mu.cpp:
             - Math/Mu.cpp
-        - NTT.cpp:
-            - Math/NTT.cpp
         - PollardRho.cpp:
             - Math/PollardRho.cpp
         - XorBasis.cpp:
             - Math/XorBasis.cpp
+        - fft.cpp:
+            - Math/fft.cpp
+        - mtt.cpp:
+            - Math/mtt.cpp
+        - ntt.cpp:
+            - Math/ntt.cpp
     - String:
         - Booth.cpp:
             - String/Booth.cpp
@@ -81,22 +83,12 @@ include:
             - Geometry/164253Version.cpp
         - ConvexHull.cpp:
             - Geometry/ConvexHull.cpp
-        - Inside.cpp:
-            - Geometry/Inside.cpp
         - Intersect.cpp:
             - Geometry/Intersect.cpp
         - MinimumEuclideanDistance.cpp:
             - Geometry/MinimumEuclideanDistance.cpp
-    - Tree:
-        - HeavyLightDecomposition(modify-and-query-on-path).cpp:
-            - Tree/HeavyLightDecomposition(modify-and-query-on-path).cpp
-        - LCA.cpp:
-            - Tree/LCA.cpp
-    - Misc:
-        - BigNum(luoguP1005).cpp:
-            - Misc/BigNum(luoguP1005).cpp
-        - Tri-search.cpp:
-            - Misc/Tri-search.cpp
+        - inside.cpp:
+            - Geometry/inside.cpp
     - AnotherVersionDataStructure:
         - BIT.cpp:
             - AnotherVersionDataStructure/BIT.cpp
@@ -151,3 +143,13 @@ include:
     - AnotherVersionTree:
         - LCA.cpp:
             - AnotherVersionTree/LCA.cpp
+    - misc:
+        - BigNum(luoguP1005).cpp:
+            - misc/BigNum(luoguP1005).cpp
+        - Tri-search.cpp:
+            - misc/Tri-search.cpp
+    - tree:
+        - HeavyLightDecomposition(modify-and-query-on-path).cpp:
+            - tree/HeavyLightDecomposition(modify-and-query-on-path).cpp
+        - lca.cpp:
+            - tree/lca.cpp

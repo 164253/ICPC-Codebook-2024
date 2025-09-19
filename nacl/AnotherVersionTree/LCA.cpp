@@ -34,11 +34,11 @@ int main() {
             par[j][i] = par[par[j][i - 1]][i - 1];
     int k = lca(1, n);
 }
-//點編號 1~n，建的無向圖但改 dfs
-//就能變有向，改有向記得邊要反著建 dep[n] 代表 n 的深度(1
-// base)，par[i][j] 代表 i 往上 1<<j 步的祖先是誰，不存在則是
-// 0，sub[i] 代表 i 的子樹大小 jmp(i,j) 代表 i 往上 j
-// 步的祖先是誰
+// 點編號 1~n，建的無向圖但改 dfs
+// 就能變有向，改有向記得邊要反著建 dep[n] 代表 n 的深度(1
+//  base)，par[i][j] 代表 i 往上 1<<j 步的祖先是誰，不存在則是
+//  0，sub[i] 代表 i 的子樹大小 jmp(i,j) 代表 i 往上 j
+//  步的祖先是誰
 
 #pragma GCC optimize(                                          \
     "Ofast,fast-math,unroll-loops,no-stack-protector")
