@@ -5,11 +5,9 @@ export TEXMF_OUTPUT_DIRECTORY := $(BUILD_DIR)
 
 ifeq ($(OS_NAME),linux)
     RM = rm -rf
-    PYTHONCMD = python3
     MKDIR = mkdir -p
 else ifeq ($(OS_NAME),windows)
     RM = rmdir /s /q
-    PYTHONCMD = python
     MKDIR = mkdir
 endif
 

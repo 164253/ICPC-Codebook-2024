@@ -1,6 +1,6 @@
 BasedOnStyle: LLVM
 Language: Cpp
-ColumnLimit: 62
+ColumnLimit: 64
 IndentWidth: 4
 ContinuationIndentWidth: 4
 AllowShortFunctionsOnASingleLine: All
