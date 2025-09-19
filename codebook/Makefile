@@ -5,16 +5,11 @@ export TEXMF_OUTPUT_DIRECTORY := $(BUILD_DIR)
 
 ifeq ($(OS_NAME),linux)
     RM = rm -rf
-    PYTHONCMD = python3
     MKDIR = mkdir -p
 else ifeq ($(OS_NAME),windows)
     RM = rmdir /s /q
-    PYTHONCMD = python
     MKDIR = mkdir
 endif
-
-$(info OS_NAME=$(OS_NAME))
-$(info PYTHONCMD=$(PYTHONCMD))
 
 all: build content
 	$(LATEX) $(LATEX_FLAGS) main.tex && $(LATEX) $(LATEX_FLAGS) main.tex

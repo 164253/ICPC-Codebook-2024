@@ -1,103 +1,153 @@
 include:
     - DataStructure:
-        - Treap:
-            - DataStructure/Treap.cpp
-        - Dynamic Segment Tree:
-            - DataStructure/DynamicSegmentTree.cpp
-        - Pbds Gp Hash Table:
-            - DataStructure/PbdsGpHashTable.cpp
-        - Pbds Rope:
-            - DataStructure/PbdsRope.cpp
-        - Pbds Tree:
-            - DataStructure/PbdsTree.cpp
-        - Pbds Priority Queue:
-            - DataStructure/PbdsPriorityQueue.cpp
-        - 2DBIT:
+        - 2DBIT.cpp:
             - DataStructure/2DBIT.cpp
-        - Persistent Segment Tree:
+        - DynamicSegmentTree.cpp:
+            - DataStructure/DynamicSegmentTree.cpp
+        - PbdsGpHashTable.cpp:
+            - DataStructure/PbdsGpHashTable.cpp
+        - PbdsPriorityQueue.cpp:
+            - DataStructure/PbdsPriorityQueue.cpp
+        - PbdsRope.cpp:
+            - DataStructure/PbdsRope.cpp
+        - PbdsTree.cpp:
+            - DataStructure/PbdsTree.cpp
+        - PersistentSegmentTree.cpp:
             - DataStructure/PersistentSegmentTree.cpp
+        - Treap.cpp:
+            - DataStructure/Treap.cpp
     - Math:
-        - FFT:
-            - Math/fft.cpp
-        - NTT:
-            - Math/ntt.cpp
-        - FWT:
-            - Math/Fwt.cpp
-        - Gaussian-Jordan:
-            - Math/gaussian.cpp
-        - Mu:
-            - Math/Mu.cpp
-        - Lucas:
-            - Math/Lucas.cpp
-        - Inv:
-            - Math/Inv.cpp
-        - CRT:
+        - CRT.cpp:
             - Math/CRT.cpp
-        - Generator:
-            - Math/Generator.cpp
-        - Count Primes:
+        - CountPrimes.cpp:
             - Math/CountPrimes.cpp
-        - Pollard Rho:
-            - Math/PollardRho.cpp
-        - Formula:
-            - Math/Formula.tex
-        - Matrix:
+        - FFT.cpp:
+            - Math/FFT.cpp
+        - FWT.cpp:
+            - Math/FWT.cpp
+        - Gaussian-Jordan.cpp:
+            - Math/Gaussian-Jordan.cpp
+        - Generator.cpp:
+            - Math/Generator.cpp
+        - Inv.cpp:
+            - Math/Inv.cpp
+        - Lucas.cpp:
+            - Math/Lucas.cpp
+        - Matrix.cpp:
             - Math/Matrix.cpp
-        - Miller Rabin:
+        - MillerRabin.cpp:
             - Math/MillerRabin.cpp
-        - Xor Basis:
+        - Mu.cpp:
+            - Math/Mu.cpp
+        - NTT.cpp:
+            - Math/NTT.cpp
+        - PollardRho.cpp:
+            - Math/PollardRho.cpp
+        - XorBasis.cpp:
             - Math/XorBasis.cpp
     - String:
-        - KMP:
-            - String/KMP.cpp
-        - Longest Palindrome:
-            - String/LongestPalindrome.cpp
-        - Z:
-            - String/Z.cpp
-        - Booth:
+        - Booth.cpp:
             - String/Booth.cpp
+        - KMP.cpp:
+            - String/KMP.cpp
+        - LongestPalindrome.cpp:
+            - String/LongestPalindrome.cpp
+        - Z.cpp:
+            - String/Z.cpp
     - Graph:
-        - one-out-degree (CSES Planets Cycles):
-            - Graph/one-degree-cycle.cpp
-        - Dijkstra:
+        - 2-SAT(CSES Planets Cycles).cpp:
+            - Graph/2-SAT(CSES Planets Cycles).cpp
+        - Dijkstra.cpp:
             - Graph/Dijkstra.cpp
-        - MaximumFlow:
-            - Graph/MaximumFlow.cpp
-        - Dinic:
+        - Dinic.cpp:
             - Graph/Dinic.cpp
-        - SCC:
+        - MaximumFlow.cpp:
+            - Graph/MaximumFlow.cpp
+        - SCC.cpp:
             - Graph/SCC.cpp
-        - VBCC:
+        - VBCC.cpp:
             - Graph/VBCC.cpp
-        - 2-SAT(CSES Giant Pizza):
-            - Graph/2-SAT.cpp
+        - one-degree-cycle(CSES Planets Cycles).cpp:
+            - Graph/one-degree-cycle(CSES Planets Cycles).cpp
     - DP:
-        - Li-Chao Segment Tree:
-            - DP/Li-Chao_SegmentTree.cpp
-        - CHO:
+        - CHO.cpp:
             - DP/CHO.cpp
-        - SOSDP:
+        - Li-Chao-SegmentTree.cpp:
+            - DP/Li-Chao-SegmentTree.cpp
+        - SOSDP.cpp:
             - DP/SOSDP.cpp
     - Geometry:
-        - Intersect:
-            - Geometry/Intersect.cpp
-        - Inside:
-            - Geometry/inside.cpp
-        - Minimum Euclidean Distance:
-            - Geometry/MinimumEuclideanDistance.cpp
-        - Convex Hull:
-            - Geometry/ConvexHull.cpp
-        - 164253 Version:
+        - 164253Version.cpp:
             - Geometry/164253Version.cpp
+        - ConvexHull.cpp:
+            - Geometry/ConvexHull.cpp
+        - Inside.cpp:
+            - Geometry/Inside.cpp
+        - Intersect.cpp:
+            - Geometry/Intersect.cpp
+        - MinimumEuclideanDistance.cpp:
+            - Geometry/MinimumEuclideanDistance.cpp
     - Tree:
-        - Heavy Light Decomposition (modify and query on path):
-            - tree/heavy-light-decomposition.cpp
-        - LCA:
-            - tree/lca.cpp
+        - HeavyLightDecomposition(modify-and-query-on-path).cpp:
+            - Tree/HeavyLightDecomposition(modify-and-query-on-path).cpp
+        - LCA.cpp:
+            - Tree/LCA.cpp
     - Misc:
-        - Tri Search:
-            - misc/tri_search.cpp
-        - Big Number:
-            - misc/BigNum(luoguP1005).cpp
-        - 對拍:
-            - misc/對拍.md
+        - BigNum(luoguP1005).cpp:
+            - Misc/BigNum(luoguP1005).cpp
+        - Tri-search.cpp:
+            - Misc/Tri-search.cpp
+    - AnotherVersionDataStructure:
+        - BIT.cpp:
+            - AnotherVersionDataStructure/BIT.cpp
+        - DSU.cpp:
+            - AnotherVersionDataStructure/DSU.cpp
+        - Treap.cpp:
+            - AnotherVersionDataStructure/Treap.cpp
+        - Treap但可以多個數縮點(疑似爛的).cpp:
+            - AnotherVersionDataStructure/Treap但可以多個數縮點(疑似爛的).cpp
+        - 區間插線段單點查詢李超(是爛的).cpp:
+            - AnotherVersionDataStructure/區間插線段單點查詢李超(是爛的).cpp
+        - 單點修改動態開點線段樹.cpp:
+            - AnotherVersionDataStructure/單點修改動態開點線段樹.cpp
+        - 單點修改無懶標線段樹.cpp:
+            - AnotherVersionDataStructure/單點修改無懶標線段樹.cpp
+        - 懶標線段樹.cpp:
+            - AnotherVersionDataStructure/懶標線段樹.cpp
+        - 純直線單點查詢李超.cpp:
+            - AnotherVersionDataStructure/純直線單點查詢李超.cpp
+    - AnotherVersionMath:
+        - CRT(luoguVersion).cpp:
+            - AnotherVersionMath/CRT(luoguVersion).cpp
+        - PollardRho.cpp:
+            - AnotherVersionMath/PollardRho.cpp
+        - 快速冪.cpp:
+            - AnotherVersionMath/快速冪.cpp
+        - 數論.cpp:
+            - AnotherVersionMath/數論.cpp
+        - 篩法.cpp:
+            - AnotherVersionMath/篩法.cpp
+    - AnotherVersionString:
+        - KMP (2).cpp:
+            - AnotherVersionString/KMP (2).cpp
+        - KMP.cpp:
+            - AnotherVersionString/KMP.cpp
+        - Manacher (2).cpp:
+            - AnotherVersionString/Manacher (2).cpp
+        - Manacher.cpp:
+            - AnotherVersionString/Manacher.cpp
+        - Z.cpp:
+            - AnotherVersionString/Z.cpp
+    - AnotherVersionGraph:
+        - Dijkstra.cpp:
+            - AnotherVersionGraph/Dijkstra.cpp
+        - SCC.cpp:
+            - AnotherVersionGraph/SCC.cpp
+        - cses有向圖基環樹森林.cpp:
+            - AnotherVersionGraph/cses有向圖基環樹森林.cpp
+    - AnotherVersionGeometry:
+        - DynamicHull.cpp:
+            - AnotherVersionGeometry/DynamicHull.cpp
+    - AnotherVersionTree:
+        - LCA.cpp:
+            - AnotherVersionTree/LCA.cpp

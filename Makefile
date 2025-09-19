@@ -4,11 +4,13 @@ ifeq ($(OS),Windows_NT)
     OS_NAME := windows
     MV = move
     SEP = \\
+    PYTHONCMD = python
     FORMAT_CMD = for /R nacl %%f in (*.c *.h *.cpp *.hpp) do $(CLANG_FORMAT) -i "%%f"
 else
     OS_NAME := linux
     MV = mv
     SEP = /
+    PYTHONCMD = python3
     FORMAT_CMD = find nacl/ -type f -regex ".*\.\(c\|h\|cpp\|hpp\)" -exec $(CLANG_FORMAT) -i {} +
 endif
 
@@ -23,7 +25,8 @@ help:
 	@echo "    make clean          - Clean up all build processes"
 
 codebook: format
-	$(MAKE) -C codebook all OS_NAME=$(OS_NAME) MV=$(MV) SEP=$(SEP)
+	$(PYTHONCMD) gen_config.py
+	$(MAKE) -C codebook all OS_NAME=$(OS_NAME) MV=$(MV) SEP=$(SEP) PYTHONCMD=$(PYTHONCMD)
 	$(MV) codebook$(SEP)main.pdf codebook.pdf
 
 format:
