@@ -140,8 +140,6 @@ def main():
         print(f'Usage: {sys.argv[0]} <config_file> <output_file>')
         exit(1)
 
-    print(sys.argv[1],sys.argv[2])
-
     _, infile, outfile = sys.argv
 
     with open(infile, 'r', encoding='utf-8') as file:

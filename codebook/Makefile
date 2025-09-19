@@ -13,9 +13,6 @@ else ifeq ($(OS_NAME),windows)
     MKDIR = mkdir
 endif
 
-$(info OS_NAME=$(OS_NAME))
-$(info PYTHONCMD=$(PYTHONCMD))
-
 all: build content
 	$(LATEX) $(LATEX_FLAGS) main.tex && $(LATEX) $(LATEX_FLAGS) main.tex
 	$(MV) $(BUILD_DIR)$(SEP)main.pdf .

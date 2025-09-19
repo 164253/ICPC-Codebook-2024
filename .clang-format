@@ -1,0 +1,14 @@
+BasedOnStyle: LLVM
+Language: Cpp
+ColumnLimit: 62
+IndentWidth: 4
+ContinuationIndentWidth: 4
+AllowShortFunctionsOnASingleLine: All
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+BinPackArguments: true
+BinPackParameters: true
+AlwaysBreakAfterReturnType: None
+PointerAlignment: Right
+BreakBeforeBraces: Attach
+SpaceBeforeParens: Never
