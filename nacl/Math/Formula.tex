@@ -32,7 +32,7 @@ Then
 \subsubsection{Properties of nCr with mod}
     If any i in base p satisfies $n_i<m_i$, then $\binom{n_i}{m_i}\%p=0$.
     Therefore $\binom{n}{m}=\prod_{i=0}^{\max(\log_p(a),\log_p(b))}\binom{n_i}{m_i}\%p$ so $\binom{n}{m}\%p=0$.
-    If $p=2$, then $\binom{n}{m}$ is odd \Leftrightarrow any bit in $n<m$.
+    If $p=2$, then $\binom{n}{m}$ is odd $\Leftrightarrow$ any bit in $n<m$.
     Lucas' theorem can be derived from this generating function method without relying on Fermat's Little Theorem.
     It is also true for polynomials.
 \subsubsection{ext-Lucas' Theorem}
@@ -54,6 +54,6 @@ Then
     v_2(x^n-y^n)=v_2(x-y)+v_2(n)&\text{if $n$ is odd}\\
     v_2(x^n-y^n)=v_2(x-y)+v_2(x+y)+v_2(n)-1&\text{else}
     \end{matrix} \\
-    \text{if }4|(x-y)\Rightarrow v_2(x+y)=1,v_2(x^n-y^n)=v_2(x-y)+v_2(n)
+    4|(x-y)\Rightarrow v_2(x+y)=1,v_2(x^n-y^n)=v_2(x-y)+v_2(n)
 \end{array}
 \]
