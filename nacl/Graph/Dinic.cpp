@@ -46,10 +46,10 @@ ll dinic(int s) {
             ans += k;
     return ans;
 }
-int main() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
-    cout.tie(0);
+int main() {                   //任意圖上複雜度 V^2E
+    ios::sync_with_stdio(0);   //邊容量為 1 時 min(V^{\frac{2}{3}},\sqrt E)E
+    cin.tie(0);                //二分圖最大匹配 E\sqrt V(是下面這行的特例)
+    cout.tie(0);               //邊容量 1 時，除源匯點滿足入度或出度都是 1，則為 E\sqrt V
     int n, m, cnt = 0;
     for(cin >> n >> m; m--;) {
         int u, v;
