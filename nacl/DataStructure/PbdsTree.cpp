@@ -1,8 +1,7 @@
 #include <bits/extc++.h>
 using namespace __gnu_pbds;
-using BST =
-    tree<int, null_type, less<int>, splay_tree_tag,
-         tree_order_statistics_node_update>;
+using BST = tree<int, null_type, less<int>, splay_tree_tag,
+                 tree_order_statistics_node_update>;
 // rb_tree_tag with log^2(n) split
 using BST_Itr = BST::iterator;
 BST tr;

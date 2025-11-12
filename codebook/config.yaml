@@ -99,6 +99,8 @@ include:
             - Misc/BigNum(luoguP1005).cpp
         - Tri-search.cpp:
             - Misc/Tri-search.cpp
+        - 對拍.md:
+            - Misc/對拍.md
     - AnotherVersionDataStructure:
         - BIT.cpp:
             - AnotherVersionDataStructure/BIT.cpp
