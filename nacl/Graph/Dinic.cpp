@@ -6,7 +6,7 @@ const ll inf = 8e18;
 #define pb push_back
 struct pp {
     int from, to;
-    ll cap,flow;
+    ll cap, flow;
 };
 int t, lvl[N], p[N];
 vector<int> g[N];
